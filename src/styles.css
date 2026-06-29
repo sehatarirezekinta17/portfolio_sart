@@ -25,6 +25,7 @@ body,
 
 body {
   min-width: 320px;
+  overflow-x: hidden;
 }
 
 a {
@@ -547,6 +548,24 @@ a {
 .contact-details span {
   font-weight: 500;
   color: #44507f;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 960px) {
+  .topbar {
+    position: static;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+  }
+
+  .nav {
+    justify-content: flex-start;
+  }
+
+  .cta-button.small {
+    width: 100%;
+  }
 }
 
 @media (max-width: 1080px) {
@@ -568,20 +587,35 @@ a {
 
 @media (max-width: 760px) {
   .page-shell {
-    width: min(100% - 20px, 100%);
-    padding-top: 14px;
+    width: min(100% - 16px, 100%);
+    padding-top: 12px;
   }
 
   .topbar {
-    position: static;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 18px;
+    padding: 16px;
+    border-radius: 18px;
   }
 
   .nav {
-    justify-content: flex-start;
-    gap: 14px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    width: 100%;
+  }
+
+  .nav a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 42px;
+    padding: 0 10px;
+    border-radius: 14px;
+    background: rgba(116, 136, 224, 0.08);
+    font-size: 0.9rem;
+  }
+
+  .nav a::after {
+    display: none;
   }
 
   .hero,
@@ -598,13 +632,108 @@ a {
 
   .hero {
     gap: 20px;
+    padding: 20px;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.2rem, 10vw, 3rem);
+    line-height: 1.04;
+  }
+
+  .section-heading h2,
+  .contact-card h2 {
+    font-size: clamp(1.7rem, 8vw, 2.35rem);
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-actions .cta-button,
+  .hero-actions .ghost-button,
+  .project-highlight .cta-button {
+    width: 100%;
   }
 
   .hero-mini-grid {
     grid-template-columns: 1fr;
   }
 
+  .social-row {
+    gap: 12px;
+    font-size: 0.92rem;
+  }
+
+  .project-top,
+  .project-footer,
+  .timeline-top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .location {
+    text-align: left;
+  }
+
+  .tag-list {
+    gap: 10px;
+  }
+
+  .tag-list span {
+    font-size: 0.88rem;
+    padding: 9px 12px;
+  }
+
+  .contact-details {
+    padding: 18px;
+  }
+
   .summary {
     font-size: 0.96rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-shell {
+    width: calc(100% - 12px);
+  }
+
+  .hero,
+  .stat-card,
+  .about-panel,
+  .highlight-panel,
+  .glass-card,
+  .project-card,
+  .timeline-card,
+  .contact-card {
+    padding: 16px;
+    border-radius: 20px;
+  }
+
+  .brand {
+    font-size: 1.45rem;
+  }
+
+  .nav {
+    grid-template-columns: 1fr;
+  }
+
+  .intro,
+  .section-heading span,
+  .badge,
+  .profile-chip {
+    font-size: 0.78rem;
+    padding: 7px 12px;
+  }
+
+  .hero h1 {
+    font-size: clamp(1.9rem, 10vw, 2.4rem);
+  }
+
+  .profile-card h3,
+  .project-card h3,
+  .timeline-card h3 {
+    font-size: 1.08rem;
   }
 }
