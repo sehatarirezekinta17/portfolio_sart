@@ -9,14 +9,14 @@ const navItems = [
 
 const highlights = [
   'Manual and automation testing for web, API, and mobile platforms',
-  'Hands-on experience in SIT, UAT, regression testing, and bug investigation',
-  'Proficient with Playwright, Selenium, Postman, JavaScript, Java, and Python'
+  'Functional, regression, integration, end-to-end testing, SIT, UAT, and PTR',
+  'Proficient with Playwright, Selenium, Appium, Postman, JavaScript, Java, and Python'
 ];
 
 const metrics = [
-  { value: '3+', label: 'Years of Professional Experience' },
-  { value: '8+', label: 'QA & Testing Tools' },
-  { value: '2', label: 'Cyber Academy Certifications' }
+  { value: '3+', label: 'Years of Experience' },
+  { value: '3', label: 'Testing Platforms: Web, API & Mobile' },
+  { value: '7', label: 'Professional Certifications' }
 ];
 
 const experiences = [
@@ -26,28 +26,34 @@ const experiences = [
     role: 'Quality Assurance Engineer',
     location: 'North Jakarta, DKI Jakarta',
     bullets: [
-      'Developed test cases, test data, and testing documentation based on requirements to increase coverage.',
-      'Executed manual and automated testing for API and web platforms to validate system functionality.',
-      'Reproduced production issues with detailed steps to accelerate debugging and issue resolution.',
-      'Handled SIT, UAT, and regression testing across platforms to keep feature integration stable.'
+      'Developed comprehensive test cases, test data, and testing documentation based on business and functional requirements.',
+      'Performed manual and automated testing for Payment & Settlement (Payment Gateway) web applications using Playwright, JavaScript, and Selenium Library, covering functional, API, end-to-end, and regression testing.',
+      'Conducted manual API and UI testing for AI-powered Digital Marketing applications, validating requests, responses, business logic, data processing, and error handling.',
+      'Tested Human Resources applications across Web and Mobile, validating HR workflows, user interactions, and cross-platform functionality.',
+      'Executed functional, regression, System Integration Testing (SIT), and User Acceptance Testing (UAT) throughout the software development lifecycle.',
+      'Identified, reproduced, documented, and tracked defects with detailed reproduction steps and supporting evidence.',
+      'Collaborated with Business Analysts, Developers, and cross-functional teams to clarify requirements, investigate defects, and ensure features meet business expectations.'
     ]
   },
   {
-    period: 'Mar 2024 - Jun 2025',
+    period: 'Jan 2024 - Jun 2025',
     company: 'PT Paramadaksa Teknologi Nusantara',
     role: 'Quality Assurance Engineer',
     location: 'Tangerang, Banten',
     bullets: [
-      'Created test cases, test data, and test documentation for API, web, and mobile platforms.',
-      'Collaborated with Business Analysts on Change Requests to align development with business needs.',
-      'Conducted SIT, UAT, and PTR to ensure system readiness before production deployment.',
-      'Verified changes through regression testing without disrupting existing functionality.'
+      'Developed comprehensive test cases, test data, and testing documentation based on business requirements.',
+      'Performed manual and automated testing for B2B and B2C marketplace applications across Web and Mobile using Java, Appium, and Selenium Library, covering functional, integration, and regression testing.',
+      'Conducted API and UI testing for OCR and identity verification systems, validating KTP data extraction and facial similarity matching.',
+      'Executed functional, regression, System Integration Testing (SIT), User Acceptance Testing (UAT), and Production Trial Run (PTR) to validate production readiness.',
+      'Identified, reproduced, documented, and tracked production and development defects with detailed steps and supporting evidence.',
+      'Collaborated with Business Analysts and development teams to review Change Requests (CR) and clarify requirements.',
+      'Conducted regression testing after enhancements and bug fixes to verify existing functionality remained stable.'
     ]
   },
   {
     period: 'Jul 2022 - Jun 2023',
     company: 'PT Bank Negara Indonesia Tbk',
-    role: 'Internship Backend Developer',
+    role: 'Internship (Backend Developer)',
     location: 'Central Jakarta, DKI Jakarta',
     bullets: [
       'Developed backend services for internal core service modules within the company.',
@@ -75,7 +81,9 @@ const skills = {
     'Jira',
     'Figma',
     'Appium',
-    'Power BI'
+    'Microsoft Power BI',
+    'Microsoft Office',
+    'Cypress'
   ],
   soft: [
     'Analytical Thinking',
@@ -92,7 +100,8 @@ const education = [
   {
     school: 'Bakrie University',
     degree: 'Bachelor of Information Systems',
-    period: 'Sep 2024 - Jun 2026 (Expected)',
+    period: 'Sep 2024 - Jul 2026',
+    gpa: '3.76/4.00',
     location: 'South Jakarta, DKI Jakarta'
   },
   {
@@ -104,8 +113,13 @@ const education = [
 ];
 
 const certifications = [
+  'BNSP Professional Competency Certification - Business Intelligence Analyst (2026)',
   'Cyber Academy - Classical Cryptography for Beginner Course (2025)',
-  'Cyber Academy - Introduction to Information Security Course (2025)'
+  'Cyber Academy - Introduction to Information Security Course (2025)',
+  'Software Quality Assurance Tester - Cypress E2E (UI) Testing (2024)',
+  'Software Quality Assurance Tester - Cypress E2E (API) Testing (2024)',
+  'Manual API Testing (2024)',
+  'Google IT Support Professional Certificate - Coursera (2022)'
 ];
 
 const socialLinks = [
@@ -171,9 +185,10 @@ function App() {
               Tinambunan
             </h1>
             <p className="summary">
-              A detail-oriented Quality Assurance Engineer with experience in
-              testing web, API, and mobile applications through both manual and
-              automation approaches.
+              Quality Assurance Engineer with 3+ years of experience in manual
+              and automation testing across Web, API, and Mobile applications.
+              Hands-on experience with payment gateway, marketplace, identity
+              verification, AI, and human resources applications.
             </p>
 
             <div className="hero-actions">
@@ -182,6 +197,9 @@ function App() {
               </a>
               <a className="ghost-button" href="#experience">
                 View Experience
+              </a>
+              <a className="ghost-button" href={`${import.meta.env.BASE_URL}resume-sehat-ari-october-2026.pdf`} download>
+                Download Resume
               </a>
             </div>
 
@@ -245,8 +263,8 @@ function App() {
           <div className="about-panel">
             <SectionHeading
               eyebrow="About Me"
-              title="A professional profile ready to be showcased"
-              text="Designed with a modern and elegant visual direction while preserving the polished style from your reference layout."
+              title="Building confidence in every release"
+              text="I help teams deliver reliable applications through structured manual testing, test automation, and clear defect documentation."
             />
             <p>
               I have a strong track record in building test scenarios,
@@ -254,8 +272,9 @@ function App() {
               issue resolution can move faster and more effectively.
             </p>
             <p>
-              My experience includes pre-release testing, regression testing,
-              SIT, UAT, and production issue investigation support.
+              I work closely with Business Analysts and Developers to turn
+              business requirements into comprehensive test coverage, from
+              functional and API testing to SIT, UAT, and production readiness.
             </p>
           </div>
 
@@ -349,7 +368,7 @@ function App() {
             <SectionHeading
               eyebrow="Work History"
               title="Relevant and detailed professional experience"
-              text="Presented in responsive cards with a focus on contributions, tools, and impact delivered in each role."
+              text="Hands-on quality assurance across payment, marketplace, AI, identity verification, and HR applications, supported by a background in backend development."
             />
           </div>
 
@@ -384,6 +403,7 @@ function App() {
                 <div key={item.school} className="stack-item">
                   <strong>{item.school}</strong>
                   <span>{item.degree}</span>
+                  {item.gpa && <span>GPA: {item.gpa}</span>}
                   <small>
                     {item.location} • {item.period}
                   </small>
@@ -395,15 +415,10 @@ function App() {
           <article className="glass-card">
             <SectionHeading
               eyebrow="Achievements"
-              title="Certifications and organization"
-              text="Reflecting continuous learning and meaningful contributions beyond formal work experience."
+              title="Certifications"
+              text="Reflecting continuous learning and professional development."
             />
             <div className="stack-list">
-              <div className="stack-item">
-                <strong>Badan Eksekutif Mahasiswa</strong>
-                <span>Student Welfare Advocacy Staff</span>
-                <small>Mar 2022 - Apr 2023</small>
-              </div>
               {certifications.map((item) => (
                 <div key={item} className="stack-item">
                   <strong>{item}</strong>
@@ -426,6 +441,9 @@ function App() {
           <div className="contact-details">
             <a href="mailto:sehatarirezekinta@gmail.com">sehatarirezekinta@gmail.com</a>
             <a href="tel:+6282164946773">+62 821 6494 6773</a>
+            <a href="https://www.linkedin.com/in/sehat-ari-rezekinta-tinambunan-30173a222/" target="_blank" rel="noreferrer">
+              LinkedIn · Sehat Ari Rezekinta Tinambunan
+            </a>
             <a href="https://github.com/sehatarirezekinta17" target="_blank" rel="noreferrer">
               github.com/sehatarirezekinta17
             </a>
