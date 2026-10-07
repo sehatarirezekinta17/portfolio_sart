@@ -161,9 +161,9 @@ function App() {
     <div className="page-shell">
       <header className="topbar">
         <a className="brand" href="#home">
-          Portfo<span>lio</span>
+          sart<span>.</span>
         </a>
-        <nav className="nav">
+        <nav className="nav" aria-label="Main navigation">
           {navItems.map((item) => (
             <a key={item.href} href={item.href}>
               {item.label}
@@ -171,19 +171,20 @@ function App() {
           ))}
         </nav>
         <a className="cta-button small" href="#contact">
-          Connect
+          Let’s talk ↗
         </a>
       </header>
 
       <main>
         <section className="hero" id="home">
           <div className="hero-copy">
-            <p className="intro">Hello, I am</p>
+            <p className="intro"><span className="status-dot" /> Quality Assurance Engineer</p>
             <h1>
-              Sehat Ari Rezekinta
+              Sehat Ari
               <br />
-              Tinambunan
+              <span>Rezekinta Tinambunan.</span>
             </h1>
+            <p className="hero-tagline">Confidence in every release.</p>
             <p className="summary">
               Quality Assurance Engineer with 3+ years of experience in manual
               and automation testing across Web, API, and Mobile applications.
@@ -193,60 +194,41 @@ function App() {
 
             <div className="hero-actions">
               <a className="cta-button" href="mailto:sehatarirezekinta@gmail.com">
-                Contact Me
+                Let’s work together ↗
               </a>
               <a className="ghost-button" href="#experience">
                 View Experience
               </a>
               <a className="ghost-button" href={`${import.meta.env.BASE_URL}resume-sehat-ari-october-2026.pdf`} download>
-                Download Resume
+                Resume ↓
               </a>
             </div>
 
             <div className="social-row">
               {socialLinks.map((link) => (
                 <a key={link.label} href={link.href} target="_blank" rel="noreferrer">
-                  {link.label}
+                  {link.label} <span aria-hidden="true">↗</span>
                 </a>
               ))}
             </div>
           </div>
 
           <div className="hero-visual">
-            <div className="profile-card hero-panel">
-              <div className="profile-chip">QA Engineer</div>
-              <h3>Quality First, User Focused</h3>
-              <p>
-                Focused on structured testing, reliable documentation, and
-                product quality from development to release.
-              </p>
-              <div className="hero-mini-grid">
-                <div>
-                  <strong>Location</strong>
-                  <span>West Jakarta</span>
-                </div>
-                <div>
-                  <strong>GitHub</strong>
-                  <span>sehatarirezekinta17</span>
-                </div>
-                <div>
-                  <strong>Featured Repos</strong>
-                  <span>2 public repositories</span>
-                </div>
-                <div>
-                  <strong>Main Focus</strong>
-                  <span>API & UI test automation</span>
-                </div>
-              </div>
-              <a
-                className="hero-link"
-                href="https://github.com/sehatarirezekinta17"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Visit GitHub Profile
-              </a>
-            </div>
+            <figure className="portrait-card">
+              <img
+                className="portrait-photo"
+                src={`${import.meta.env.BASE_URL}sehat-ari-portrait.jpeg`}
+                alt="Sehat Ari Rezekinta Tinambunan wearing a black shirt with arms crossed"
+                width="1024"
+                height="1536"
+                fetchPriority="high"
+              />
+              <figcaption className="portrait-caption">
+                <span className="intro">Quality Assurance Engineer</span>
+                <strong>Detail oriented.<br />Quality driven.</strong>
+                <span className="portrait-location"><span className="status-dot" /> Based in West Jakarta, Indonesia</span>
+              </figcaption>
+            </figure>
           </div>
         </section>
 
@@ -291,7 +273,7 @@ function App() {
         <section className="skills-section">
           <SectionHeading
             eyebrow="Expertise"
-            title="Tools, technologies, and core strengths"
+              title="The tools behind the quality."
             text="A combination of QA hard skills and collaborative soft skills to keep product quality consistent."
           />
 
@@ -319,21 +301,22 @@ function App() {
           <div className="experience-intro">
             <SectionHeading
               eyebrow="Projects"
-              title="GitHub projects featured in this portfolio"
+              title="Testing, put into practice."
               text="A selected showcase of public repositories that reflect hands-on work in QA automation and JavaScript-based testing."
             />
           </div>
 
           <div className="projects-grid">
-            {featuredProjects.map((project) => (
+            {featuredProjects.map((project, index) => (
               <article key={project.name} className="project-card">
+                <div className="project-art" aria-hidden="true"><span>{index === 0 ? '{ }' : '〈/〉'}</span><small>{index === 0 ? 'API AUTOMATION' : 'UI AUTOMATION'}</small><b>0{index + 1}</b></div>
                 <div className="project-top">
                   <span className="badge">{project.stack}</span>
                   <a href={project.href} target="_blank" rel="noreferrer">
                     Open Repo
                   </a>
                 </div>
-                <h3>{project.name}</h3>
+                <h3>{project.name === 'portofolio_qa' ? 'API Testing Suite' : 'UI Testing Suite'}</h3>
                 <p>{project.summary}</p>
                 <div className="project-footer">
                   <span>GitHub Repository</span>
@@ -367,7 +350,7 @@ function App() {
           <div className="experience-intro">
             <SectionHeading
               eyebrow="Work History"
-              title="Relevant and detailed professional experience"
+              title="A journey driven by quality."
               text="Hands-on quality assurance across payment, marketplace, AI, identity verification, and HR applications, supported by a background in backend development."
             />
           </div>
@@ -431,7 +414,7 @@ function App() {
         <section className="contact-card" id="contact">
           <div>
             <p className="intro">Contact</p>
-            <h2>Ready to contribute to stronger quality assurance initiatives</h2>
+            <h2>Let’s build something<br /><span>you can trust.</span></h2>
             <p>
               Open to collaboration opportunities, QA Engineer roles, and
               projects that require structured and precise system testing.
@@ -451,6 +434,7 @@ function App() {
           </div>
         </section>
       </main>
+      <footer className="footer"><a className="brand" href="#home">sart<span>.</span></a><p>© {new Date().getFullYear()} Sehat Ari Rezekinta Tinambunan</p><a href="#home">Back to top ↑</a></footer>
     </div>
   );
 }
