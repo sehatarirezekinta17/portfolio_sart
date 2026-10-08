@@ -199,7 +199,7 @@ function App() {
               <a className="ghost-button" href="#experience">
                 View Experience
               </a>
-              <a className="ghost-button" href={`${import.meta.env.BASE_URL}resume-sehat-ari-october-2026.pdf`} download>
+              <a className="ghost-button" href={`${import.meta.env.BASE_URL}Resume-Sehat-Ari.pdf`} download>
                 Resume ↓
               </a>
             </div>
